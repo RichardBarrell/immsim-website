@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  font-size: 0.625em;
+  height: 100vh;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: #eee;
+  color: #220822;
+  font-size: 2rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  line-height: 1.2;
+  margin: 0.6rem 0 1.2rem;
+}
+h1 {
+  font-size: 3.2rem;
+  margin: 0.4rem 0 1.6rem 0;
+}
+h2 {
+  font-size: 2.4rem;
+  margin: 0.4rem 0 1.4rem 0;
+}
+main {
+  min-height: 100vh;
+  overflow-y: scroll;
+  padding: 1rem;
+  border: solid #220822;
+  border-width: 0 1px 0 1px;
+  background-color: #d8d8d8;
+  max-width: 96rem;
+  margin: 0 auto;
+  position: relative;
+}
+.score-card {
+  position: sticky;
+  top: 1rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #220822;
+  background-color: #d0d0d0;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  em {
+    text-decoration: underline;
+    font-style: normal;
+  }
+  ul {
+    margin: 0.8rem 1.6rem;
+    > li {
+      margin-left: 0.8rem;
+    }
+  }
+  .active {
+    text-decoration: underline;
+  }
+  .active.high {
+    background-color: #af0;
+  }
+  .active.mid {
+    background-color: #8a0;
+  }
+  .active.low {
+    background-color: #00081b;
+    color: #e00;
+  }
+  .controls {
+    display: flex;
+    flex-direction: row;
+    .readout-lines {
+      display: flex;
+      flex-direction: column;
+      align-self: flex-end;
+    }
+    .readout-line {
+      margin: 0 2rem 0.4rem;
+      align-self: flex-end;
+    }
+    .readout {
+      font-weight: bold;
+      font-size: 3rem;
+    }
+    .button {
+      align-self: center;
+      padding: 0.8rem;
+      margin: 0 auto 0 0.4rem;
+    }
+  }
+}
+.questions:first-of-type {
+  margin-top: 0;
+}
+.questions {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  .question-row {
+    display: flex;
+    margin: 0 0 1.6rem 1rem;
+    .question {
+      flex: 1 0 20rem;
+    }
+    .question-answers {
+      margin-left: 1rem;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      label:last-of-type {
+        border-width: 1px;
+      }
+      label {
+        border: solid black;
+        border-width: 1px 0 1px 1px;
+        justify-content: flex-end;
+        align-items: center;
+        display: flex;
+        min-width: 10rem;
+        min-height: 6rem;
+        margin: 0.2rem 0;
+        padding: 0 2rem;
+      }
+    }
+  }
+}

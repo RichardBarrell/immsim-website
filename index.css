@@ -88,6 +88,7 @@ main {
     .readout-line {
       margin: 0 2rem 0.4rem;
       align-self: flex-end;
+      text-align: right;
     }
     .readout {
       font-weight: bold;
@@ -132,5 +133,37 @@ main {
         padding: 0 2rem;
       }
     }
+  }
+}
+@media (max-width: 600px) {
+  .questions {
+    .question-row {
+      flex-direction: column;
+      .question {
+        flex: 0 0 4rem;
+      }
+      .question-answers {
+        label {
+          min-width: calc(min(10rem, 33vw - 2rem));
+          min-height: calc(min(6rem, 3rem + 5vw));
+        }
+      }
+    }
+  }
+  body {
+    font-size: calc(1vw + 1.2rem);
+  }
+  .score-card {
+    .controls {
+      .readout {
+        font-size: calc(4vw + 1.6rem);
+      }
+    }
+  }
+  h1 {
+    font-size: calc(min(3.2rem, 1vw + 2rem));
+  }
+  h2 {
+    font-size: calc(min(2.4rem, 2vw + 1.4rem));
   }
 }
